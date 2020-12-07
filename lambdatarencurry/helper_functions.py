@@ -36,12 +36,12 @@ class DataFrameHelper:
 
         return df_train, df_test
 
-    def randomize(df):
+    def randomize(self):
         """
         Randomization function that randomizes all of a dataframes cells
         then returns that randomized dataframe.
         """
-        df = df.copy()
+        df = self.df.copy()
         # Use the pandas built in `sample()` function to create the randomize
         df_results = df.sample(frac=1)
 
@@ -101,13 +101,14 @@ class SeriesHelper:
     #     """
     #     # TODO - Implement
     #     return 'addy_split'
-    #
+
     # def abbr_2_st(state_series, abbr_2_state=True):
     #     """
-    #     Return a new column with the full name from a State abbreviation column
-    #     -> An input of FL would return Florida. This function should also take
-    #     a boolean (abbr_2_state) and when False takes full state names and
-    #     return state abbreviations. -> An input of Florida would return Fl.
+    #     Return a new column with the full name from a State abbreviation
+    #     column -> An input of FL would return Florida. This function should
+    #     also take a boolean (abbr_2_state) and when False takes full state
+    #     names and return state abbreviations. -> An input of Florida would
+    #     return Fl.
     #     """
     #     # TODO - Implement
     #     return 'abbr_2_st'
